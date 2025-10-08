@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Greeting Input</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f7f7f9;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="p-8 bg-white shadow-xl rounded-xl max-w-sm w-full">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Enter your name:</h2>
+        
+        <div class="flex space-x-2 mb-4">
+            <input 
+                type="text" 
+                id="nameInput" 
+                placeholder="Your name here" 
+                class="flex-grow p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+            >
+            <button 
+                onclick="greetUser()" 
+                class="bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 transition duration-150 active:bg-blue-800"
+            >
+                Check Name
+            </button>
+        </div>
+        <div id="messageOutput" class="p-3 mt-4 text-center rounded-lg min-h-[40px] text-gray-600 bg-gray-100">   
+        </div>
+    </div>
+    
+    <script>
+     
+      function greetUser() {
+        
+        const nameInput = document.getElementById("nameInput");
+        const name = nameInput.value.trim(); 
+
+        const outputDiv = document.getElementById("messageOutput");
+
+        outputDiv.className = "p-3 mt-4 text-center rounded-lg min-h-[40px] text-gray-600 bg-gray-100";
+        
+        if (name === "") {
+          
+          outputDiv.textContent = "❗ Please enter your name first!";
+          outputDiv.classList.add("bg-red-100", "text-red-700"); 
+        } else {
+          
+          outputDiv.textContent = `Hello, ${name}! Welcome to the app.`;
+          outputDiv.classList.add("bg-green-100", "text-green-700"); 
+        }
+      }
+    </script>
+  </body>
+</html>
