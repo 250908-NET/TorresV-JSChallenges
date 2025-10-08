@@ -201,11 +201,13 @@ Example:
     <h2>Enter your name:</h2>
     <input type="text" id="nameInput" placeholder="Your name here">
     <button onclick="greetUser()">Greet Me</button>
-
+    
+<!--Modify the function so that if the input is empty, it alerts:
+    “Please enter your name first!”-->
     <script>
-      function greetUser() {
-        let name = document.getElementById("nameInput").value;
-        alert("Hello, " + name + "!");
+      function emptyUser() {
+        let empty = document.getElementById("nameInput").value;
+        alert("Please enter your name first, " + empty + "!");
       }
     </script>
   </body>
@@ -214,9 +216,6 @@ Example:
 
 ### Mini Challenge
 
-Modify the function so that if the input is empty, it alerts:
-
-> “Please enter your name first!”
 
 ---
 
