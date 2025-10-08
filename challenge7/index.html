@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Square Number</title>
+    <style>
+    
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      .container {
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      input[type="number"], button {
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        border: none;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Enter a Number:</h2>
+      
+      <input 
+        type="number" 
+        id="numberInput" 
+        placeholder="e.g., 4" 
+      >
+      
+      <button onclick="squareTheNumber()">
+        Square It!
+      </button>
+    </div>
+    
+    <script>
+     
+      function square(num) {
+
+        return parseFloat(num) * parseFloat(num);
+      }
+
+      
+      function squareTheNumber() {
+        
+        const inputElement = document.getElementById("numberInput");
+        
+        const number = inputElement.value;
+
+        if (number === "" || isNaN(number)) {
+          alert("Please enter a valid number.");
+          return;
+        }
+        
+        const result = square(number);
+        
+        alert(`The square of ${number} is ${result}`);
+      }
+    </script>
+  </body>
+</html>
