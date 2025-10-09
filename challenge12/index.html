@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 12 - Changing Content</title>
+</head>
+<body>
+    <h1 id="heading">Welcome!</h1>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        let button = document.getElementById("myButton");
+        let heading = document.getElementById("heading");
+        
+        button.addEventListener("click", function() {
+            heading.textContent = "You clicked the button!";
+            heading.style.color = "blue";
+            heading.style.fontSize = "32px";
+        });
+    </script>
+</body>
+</html>
