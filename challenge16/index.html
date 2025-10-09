@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 16 - Color Changer</title>
+</head>
+<body>
+    <h1>Click the button to change background color</h1>
+    <button id="colorButton">Change Color</button>
+
+    <script>
+        let button = document.getElementById("colorButton");
+        let colors = ["lightblue", "lightgreen", "lightcoral", "lightyellow", "lavender"];
+        let currentIndex = 0;
+        
+        button.addEventListener("click", function() {
+            document.body.style.backgroundColor = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length;
+        });
+    </script>
+</body>
+</html>
