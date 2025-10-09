@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 13 - Style Switcher</title>
+</head>
+<body>
+    <p id="text">This is a paragraph that can change styles!</p>
+    <button id="redButton">Make Red and Bold</button>
+    <button id="resetButton">Reset to Normal</button>
+
+    <script>
+        let text = document.getElementById("text");
+        let redButton = document.getElementById("redButton");
+        let resetButton = document.getElementById("resetButton");
+        
+        redButton.addEventListener("click", function() {
+            text.style.color = "red";
+            text.style.fontWeight = "bold";
+        });
+        
+        resetButton.addEventListener("click", function() {
+            text.style.color = "black";
+            text.style.fontWeight = "normal";
+        });
+    </script>
+</body>
+</html>
